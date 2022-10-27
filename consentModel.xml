@@ -1,0 +1,31 @@
+
+<!-- For the community's data officer and their access to certain data-->
+    <datatype> 
+    <!-- attribute-list/resource/resource -->
+    <artifact id="IIITBRP_artif1"> artifact_name </artifact>
+    <duration> 6 months</duration>
+    <frequency>yearly</frequency>
+    <Role type="policy">Data_Requestor</Role>
+        <obligation>require_purpose</obligation>
+        <Permission>
+            <action>read</action>
+        </Permission>
+        <Forbidden>
+            <action>download</action>
+            <action>share</action>
+        </Forbidden>
+    </datatype>
+
+<!-- For govt role obligated to show purpose when accessing restricted data -->
+<datatype type="restricted"> 
+    <artifact> artifact_name </artifact>
+    <Role>govtOfficer</Role>
+        <obligation>requirePurpose</obligation>
+        <Permission>
+            <action>read</action>
+            <action>share</action>
+            <action>download</action>
+        </Permission>
+        <Forbidden>
+        </Forbidden>
+    </datatype>
